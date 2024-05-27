@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    background-color: lightgreen;
+}
+
+.centeredContainer{
+    margin:10px;
+    padding:12px;
+    height:95%;
+    width:90%;
+    background-color:white;
+    border-radius:10px;
+}
+header {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Same as container background to blend */
+    z-index: 10;
+    padding-top: 12px;
+}
+
+header h1{
+    color:rgb(47, 233, 218);
+    margin:5px auto;
+}
+header p{
+    margin:10px 0 6px 0;
+}
+.sections{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-top:4px;
+
+}
+.section1{
+    margin-top:5px;
+}
+.section2{
+    width:48%;
+}
+.sections p{
+    font-size: 16px;
+    font-weight:600;
+    margin:7px 0 4px 0;
+}
+label{
+    font-weight:bold;
+    margin:3px 0 3px 0;
+}
+
+/* inputs for basic information like name,phone and email */
+.info{
+    outline:none;
+    height:2rem;
+    width:22rem;
+    border:1px solid #ccc;
+    padding-left:5px;
+    margin-bottom:5px;
+}
+
+/* inputs for radio button */
+
+textarea{
+    outline:none;
+    border:1px solid #ccc;
+    width:23rem;
+    height:4rem;
+    padding-left:5px;
+    font-weight:500;
+    font-size:15px;
+    color:darkslategray;
+    margin:3px;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+legend {
+    font-weight: bold;
+    padding-left:25px;
+}
+.age-container {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:column;
+    gap:1rem;
+    height:7rem;
+}
+
+
+.age-container label {
+    flex: 1 1 45%; /* Adjust the width to fit two items per row */
+    box-sizing: border-box;
+}
+
+button{
+    height:2rem;
+    width:28rem;
+    background-color:rgb(47, 233, 218);
+    cursor:pointer;
+    border-radius:7px;
+    font-size:large;
+    letter-spacing:0.8px;
+    color:white;
+}
+@media screen and (max-width: 768px) {
+    .centeredContainer {
+        height: auto; /* Adjust height to auto to fit content */
+        width: 95%;
+        max-height: 100vh; /* Ensure container doesn't exceed viewport height */
+    }
+
+    .sections {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section1, .section2 {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+    
